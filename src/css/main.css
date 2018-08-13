@@ -1,2 +1,126 @@
-.header {
-  background-color: #efefef; }
+/* http://meyerweb.com/eric/tools/css/reset/
+   v4.0 | 20180602
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header-top {
+  background: #dbe342; }
+  .header-top__socials {
+    height: 38px;
+    padding-top: 8px;
+    padding-bottom: 8px; }
+    .header-top__socials--icon {
+      height: 20px;
+      width: auto;
+      display: block;
+      font-size: 1.2rem;
+      line-height: 1;
+      display: inline-block;
+      margin-left: 5px;
+      color: #661a4f; }
+      .header-top__socials--icon:first-child {
+        font-size: 1.1rem;
+        margin-left: 0; }
+      .header-top__socials--icon:hover {
+        color: #3d1030; }
+  .header-top__nav {
+    border-top: 1px solid #c1c925; }
+    .header-top__nav a {
+      width: 49%;
+      height: 38px;
+      display: inline-block;
+      border-left: 1px solid #c1c925; }
+      .header-top__nav a:first-child {
+        border-left: none; }
+
+.header-nav {
+  background: #661a4f;
+  height: auto;
+  width: 100%; }
+  .js .header-nav {
+    height: 63px;
+    overflow: hidden; }
+    .js .header-nav .container {
+      height: 100%; }
+  .header-nav__logo {
+    display: inline-block;
+    max-width: 124px;
+    height: 63px;
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 12px; }
+  .header-nav__hambugger {
+    display: none; }
+    .js .header-nav__hambugger {
+      display: inline-block;
+      float: right;
+      border: none;
+      background: transparent;
+      color: #fff;
+      position: relative;
+      top: 12px;
+      background: #52153f;
+      cursor: pointer; }
+      .js .header-nav__hambugger:hover, .js .header-nav__hambugger:focus {
+        background: #3d1030; }
+    .header-nav__hambuggerParties {
+      font-size: 1.2em;
+      padding: 0.5em 0.3em; }
+  .header-nav__menu a {
+    color: #fff;
+    display: block;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-top: 1px solid #5a1746; }
+    .header-nav__menu a:hover {
+      background: #5a1746; }
+  .js .header-nav__menu {
+    display: none; }
+  .menu--opened .header-nav__menu {
+    display: block; }

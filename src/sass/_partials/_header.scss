@@ -1,0 +1,118 @@
+.header-top {
+    background: $green;
+
+    &__socials {
+        height: 38px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        &--icon {
+            height: 20px;
+            width: auto;
+            display: block;
+            font-size: 1.2rem;
+            line-height: 1;
+            display: inline-block;
+            margin-left: 5px;
+            color: $purple;
+
+            &:first-child {
+                font-size: 1.1rem;
+                margin-left: 0;
+            }
+
+            &:hover {
+                color: darken($color: $purple, $amount: 10%);
+            }
+        }
+    }
+
+    &__nav {
+        border-top: 1px solid $green-darken;
+
+        & a {
+            width: 49%;
+            height: 38px;
+            display: inline-block;
+            border-left: 1px solid $green-darken;
+
+            &:first-child {
+                border-left: none;
+            }
+        }
+    }
+}
+
+.header-nav {
+    $height-menu: 63px;
+
+    background: $purple;
+    height: auto;
+    width: 100%;
+
+    .js & {
+        height: $height-menu;
+        overflow: hidden;
+
+        .container {
+            height: 100%;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        max-width: 124px;
+        height: $height-menu;
+        position: relative;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    &__hambugger {
+        display: none;
+
+        .js &{
+            display: inline-block;
+            float: right;
+            border: none;
+            background: transparent;
+            color: #fff;
+            position: relative;
+            top: 12px;
+            background: darken($color: $purple, $amount: 5%);
+            cursor: pointer;
+
+            &:hover, &:focus {
+                background: darken($color: $purple, $amount: 10%);
+            }
+        }
+
+        &Parties {
+            font-size: 1.2em;
+            padding: 0.5em 0.3em;
+        }
+    }
+
+    &__menu {
+       
+        a {
+            color: #fff;
+            display: block;
+            font-size: 1.5em;
+            padding:  0.5em;
+            border-top: 1px solid darken($color: $purple, $amount: 3%);
+        
+            &:hover {
+                background: darken($color: $purple, $amount: 3%);
+            }
+        }
+
+        .js & {
+           display: none; 
+        }
+
+        .menu--opened & {
+            display: block;
+        }
+    }
+}
