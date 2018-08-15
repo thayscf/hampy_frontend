@@ -1,5 +1,4 @@
-@import '../../node_modules/reset-css/sass/_reset';
-
-@import '_variables';
-
-@import "_partials/_header";
+@import '_utilities/indexUtilities';
+@import '_base/_indexBase';
+@import '_modules/_indexModules';
+@import '_layout/_indexLayout';

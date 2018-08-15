@@ -1,0 +1,13 @@
+.btn {
+
+    &.btn_purple_lg {
+        color: #fff;
+        background: $purple-lighten;
+        border: none;
+        @include box-shadow(3px, 5px, 0, $purple);
+        @include border-radius(50px);
+        @extend .text_btn;
+    }
+
+}
+

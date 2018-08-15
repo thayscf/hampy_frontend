@@ -1,0 +1,13 @@
+.title_section {
+    @include font-mont(3.3em, 900);
+    font-style: italic;
+}
+
+.text_destaque {
+    @include font-mont(1.5em, 400);
+    font-style: italic;
+}
+
+.text_btn {
+    @include font-mont(1.5em, 600);
+}

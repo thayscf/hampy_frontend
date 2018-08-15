@@ -5,6 +5,10 @@
         height: 38px;
         padding-top: 8px;
         padding-bottom: 8px;
+        text-align: left;
+        @include mq('Extra-small') {
+            text-align: center;
+        }
 
         &--icon {
             height: 20px;
@@ -100,8 +104,15 @@
             display: block;
             font-size: 1.5em;
             padding:  0.5em;
-            border-top: 1px solid darken($color: $purple, $amount: 3%);
-        
+            text-transform: uppercase;
+            @include mq('Extra-small') {
+                border-top: 1px solid darken($color: $purple, $amount: 3%);
+
+                &:last-child {
+                    border-bottom: 1px solid darken($color: $purple, $amount: 3%); 
+                }   
+            }
+            
             &:hover {
                 background: darken($color: $purple, $amount: 3%);
             }
