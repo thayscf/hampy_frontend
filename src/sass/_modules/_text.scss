@@ -9,5 +9,20 @@
 }
 
 .text_btn {
-    @include font-mont(1.5em, 600);
+    @include font-mont(1.2em, 600); 
+    text-align: center;
+}
+
+.text_menu {
+    @include font-mont(1.15em, 700);
+}
+
+.text_destaque_h2 {
+    @include font-ubun(1.8em, 700);
+    font-style: italic;
+}
+
+.p_home {
+    @include font-ubun(1.05em, 300);
+    line-height: 20px;
 }

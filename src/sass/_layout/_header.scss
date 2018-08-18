@@ -1,8 +1,9 @@
 .header-top {
     background: $green;
+    $h: 38px;
 
     &__socials {
-        height: 38px;
+        height: 100%;
         padding-top: 8px;
         padding-bottom: 8px;
         text-align: left;
@@ -33,15 +34,40 @@
 
     &__nav {
         border-top: 1px solid $green-darken;
+        height: $h;
+        @include mq('Extra-small') {
+            padding: 0;
+        }
 
         & a {
-            width: 49%;
-            height: 38px;
-            display: inline-block;
+            width: 50%;
+            height: 100%;
+            display: block;
+            position: relative;
+            float: left;
             border-left: 1px solid $green-darken;
+            @include font-mont(0.75em, 500);
+            text-align: center;
+            padding: .9em;
+            color: $purple;
+
+            & img {
+                margin-right: 5px;
+                @include mq('Extra-small') {
+                    width: 11px;
+                    height: 12px;
+                    position: relative;
+                }
+            }
 
             &:first-child {
                 border-left: none;
+                padding: 1em;
+            }
+
+            &:hover {
+                text-decoration: none;
+                background: $green-darken;
             }
         }
     }
@@ -105,8 +131,11 @@
             font-size: 1.5em;
             padding:  0.5em;
             text-transform: uppercase;
+            @extend .text_menu;
             @include mq('Extra-small') {
                 border-top: 1px solid darken($color: $purple, $amount: 3%);
+                font-size: 1.2em;
+                padding: .8em;
 
                 &:last-child {
                     border-bottom: 1px solid darken($color: $purple, $amount: 3%); 
@@ -115,6 +144,7 @@
             
             &:hover {
                 background: darken($color: $purple, $amount: 3%);
+                text-decoration: none;
             }
         }
 

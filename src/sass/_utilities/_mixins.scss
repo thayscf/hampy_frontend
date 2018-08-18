@@ -15,16 +15,6 @@ $breakpoints: (
         }
     }
 }
-/* O exemplo abaixo mostra o `padding` e o `font-size` aumentando quando a largura da tela fica maior que 1024px.
-
-.site-header {
-    padding: 2rem;
-    font-size: 1.8rem;
-    @include mq('tablet-wide') {
-        padding-top: 4rem;
-        font-size: 2.4rem;
-    }
-} */
 
 @mixin input-placeholder {
     &.placeholder { @content; }
@@ -45,6 +35,13 @@ textarea {
 //Font Montserrat
 @mixin font-mont($size: false, $weight: false) {
     font-family: 'Montserrat', sans-serif;
+    @if $size { font-size: $size; }
+    @if $weight { font-weight: $weight; }
+}
+
+//Font Ubuntu
+@mixin font-ubun($size: false, $weight: false) {
+    font-family: 'Ubuntu', sans-serif;
     @if $size { font-size: $size; }
     @if $weight { font-weight: $weight; }
 }
@@ -83,13 +80,6 @@ textarea {
 	transition: $property $duration;
 	    -webkit-transition: $property $duration;
 	        -moz-transition: $property $duration;
-}
-
-//Border Radius
-@mixin border-radius($radius) {
-	border-radius: $radius;
-	    -webkit-border-radius: $radius;
-	        -moz-border-radius: $radius;
 }
 
 @mixin border-radius-single($topleft, $topright, $bottomright, $bottomleft) {

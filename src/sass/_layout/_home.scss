@@ -1,10 +1,14 @@
+.section {
+    padding: 50px 0;
+}
+
 #section_1 {
     background: $purple;
     background-image: url(../img/back01.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 0;
+    @extend .section;
     @include mq('Extra-small'){
         background-position: left;
     }
@@ -12,7 +16,7 @@
     & .text_call {
         position: relative;
 
-        & p {
+        & .text_call_destaque {
             margin-top: 15px;
             text-align: right;
             color: #fff;
@@ -26,33 +30,204 @@
                 /*rgba($color: #000000, $alpha: .1)*/
             }
         }
-    }
 
-    & h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
-        font-style: italic;
-        color: #fff;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        padding-left: 32px;
-
-        &:last-child {
-            margin-top: 8px;
-            padding-left: 25px;
+        & h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-style: italic;
+            color: #fff;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            padding-left: 32px;
+    
+            &:last-child {
+                margin-top: 8px;
+                padding-left: 25px;
+            }
         }
-    }
-
-    & span {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
-        font-style: italic;
-        color: $green;
-        font-size: 4.5em;
-        text-transform: uppercase;
-        position: absolute;
-        left: 14px;
-        top: -8px;
+    
+        & span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-style: italic;
+            color: $green;
+            font-size: 4.5em;
+            text-transform: uppercase;
+            position: absolute;
+            left: 14px;
+            top: -8px;
+        }
     }
 }
 
+#section_2 {
+    position: relative;
+    @extend .section;
+    
+    &::after {
+        background: #fff;
+        background-image: url(../img/back02.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+        @include mq('Extra-small'){
+            background-position: left;
+            background-position-x: -150px;
+        }
+    }
+
+    & .apresentacao_title {
+        @extend .text_destaque_h2; 
+        text-align: right;
+        color: $purple;
+        @include mq('Extra-small'){
+            // text-align: center;
+        }
+    }
+
+    & .apresentacao_text {
+        margin-top: 30px;
+        @extend .p_home;
+        text-align: right;
+        color: $gray;
+    }
+}
+
+#call_challenger {
+    padding: 20px 0;
+    background: $purple;
+    width: 100%;
+    height: auto;
+
+    & p {
+        @include font-mont(1em, 400);
+        color: #fff;
+        line-height: 20px;
+        
+        & span {
+            font-weight: 600;
+        }
+    }
+}
+
+#section_3 {
+    @extend .section;
+    background: #fff;
+
+    & h2 {
+        @extend .title_section;
+        color: $purple;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        @include mq('Extra-small') {
+            font-size: 1.5em;
+        }
+    }
+
+    & p {
+        margin-top: 30px;
+        @extend .p_home;
+        text-align: center;
+        color: $gray;
+
+        & span {
+            font-weight: 600;
+        }
+    }
+
+    .resultado_img {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .resultado_text_aluna {
+        margin-top: 15px;
+
+        &--legenda {
+            font-weight: 700;
+            margin-top: 8px;
+        }
+    }
+}
+
+#section_4 {
+    @extend .section;
+    background: $gray-ligthten;
+    background-image: url(../img/back03.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mq('Extra-small'){
+        background: $gray-ligthten;
+        // background-image: url(../img/back03.png);
+        // background-position: center;
+        // background-size: auto 100%;
+    }
+
+    & h2 {
+        @extend .title_section;
+        color: $purple;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        @include mq('Extra-small') {
+            font-size: 1.5em;
+        }
+    }
+
+    & .vantagens_list {
+        list-style-image: url(../img/list_style.png);
+        list-style-position: inside;
+        margin-top:30px;
+        @include mq('Extra-small') {
+            list-style-image: url(../img/list_style_xs.png);
+        }
+        background: $green;
+        @include border-radius-single(0, 50%, 50%, 0);
+        padding: 35px 0 35px 15px;
+        width: calc(100% + 15px);
+        margin-left: -15px;
+        
+        
+        & li {
+            @extend .text_destaque;
+            color: #000;
+            @include mq('Extra-small') {
+                font-size: 1.3em;
+                line-height: 1.3em;
+            }
+
+            & span {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+#section_5 {
+    @extend .section;
+    background: #fff;
+    background-image: url(../img/back04.png);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+
+}
+
+.hidden-xs {
+    @include mq('Extra-small') {
+        visibility: hidden;
+        display: none;
+    }
+}
