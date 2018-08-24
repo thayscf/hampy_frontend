@@ -133,6 +133,12 @@ textarea {
   font-weight: 700;
   src: url(../../components/fonts/Ubuntu-BoldItalic.ttf); }
 
+g {
+  display: none; }
+
+g:target {
+  display: inline; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v4.0 | 20180602
    License: none (public domain)
@@ -194,13 +200,13 @@ section {
   height: auto;
   display: block; }
 
-.title_section, #section_3 h2, #section_4 h2 {
+.title_section, #section_3 h2, #section_4 h2, #section_5 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 3.3em;
   font-weight: 900;
   font-style: italic; }
 
-.text_destaque, #section_1 .text_call .text_call_destaque, #section_4 .vantagens_list li {
+.text_destaque, #section_1 .text_call .text_call_destaque, #section_4 .vantagens_list li, #section_5 h3, #section_6 p {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   font-weight: 400;
@@ -223,11 +229,37 @@ section {
   font-weight: 700;
   font-style: italic; }
 
-.p_home, #section_2 .apresentacao_text, #section_3 p {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.05em;
+.text_categories, .blog_post--categories {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  font-weight: 700; }
+
+.text_title_blog_preview, #section_5 .blog_post .blog_post_preview .blog_post_preview--title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333; }
+
+.text_date_blog_preview, #section_5 .blog_post .blog_post_preview .blog_post_preview--date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
   font-weight: 300;
-  line-height: 20px; }
+  color: #333333;
+  text-transform: uppercase; }
+
+.text_blog_preview, #section_5 .blog_post .blog_post_preview .blog_post_preview--text {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: #333333; }
+
+.text_btn_blog, .btn.btn_blog {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: #555;
+  text-transform: none; }
 
 .video {
   position: relative;
@@ -290,6 +322,146 @@ section {
         width: 100%; } }
     .btn.btn_green:hover {
       background: #c1c925; }
+  .btn.btn_blog {
+    background: #d7d7d7;
+    margin-top: 15px;
+    float: right;
+    position: relative; }
+    .btn.btn_blog:hover {
+      background: #c5c5c5; }
+  .btn.btn_input {
+    background: #661a4f;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    height: calc(2.5rem + 2px);
+    top: 0;
+    right: 0; }
+    @media only screen and (max-width: 575.98px) {
+      .btn.btn_input {
+        font-size: 0.85em; } }
+    .btn.btn_input:hover {
+      background: #c5c5c5; }
+
+.blog_post--categories {
+  position: relative;
+  display: block;
+  height: 30px;
+  width: auto;
+  background: #dddddd;
+  -webkit-border-radius: 1.5em;
+  border-radius: 1.5em;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 2.4;
+  padding: 0 20px 0 0; }
+  .blog_post--categories:hover {
+    text-decoration: none;
+    background: #d0d0d0; }
+  .blog_post--categories .blog_post--categories_icon {
+    display: block;
+    height: 30px;
+    width: 30px;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    position: relative;
+    float: left;
+    padding: 5px;
+    margin-right: 8px; }
+    .blog_post--categories .blog_post--categories_icon img {
+      display: block;
+      width: 18px;
+      height: auto;
+      margin: 0 auto; }
+
+.cat-01 {
+  color: #e9005b; }
+  .cat-01 div {
+    background-color: #e9005b; }
+  .cat-01 .svg_icon {
+    width: px;
+    height: auto; }
+  .cat-01:hover {
+    color: #e9005b; }
+
+.cat-02 {
+  color: #05c698; }
+  .cat-02 div {
+    background-color: #05c698; }
+  .cat-02:hover {
+    color: #05c698; }
+
+input,
+textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #333333; }
+  input.placeholder,
+  textarea.placeholder {
+    color: #333333;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.05em;
+    font-weight: 300;
+    line-height: 1.2; }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color: #333333;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.05em;
+    font-weight: 300;
+    line-height: 1.2; }
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color: #333333;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.05em;
+    font-weight: 300;
+    line-height: 1.2; }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: #333333;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.05em;
+    font-weight: 300;
+    line-height: 1.2; }
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: #333333;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.05em;
+    font-weight: 300;
+    line-height: 1.2; }
+  @media only screen and (max-width: 575.98px) {
+    input,
+    textarea {
+      font-size: 0.85em; } }
+
+.form_input {
+  display: block;
+  width: 100%;
+  height: calc(2.5rem + 2px);
+  padding: 0.7em 0.9em;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 2em;
+  border: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  @media only screen and (max-width: 575.98px) {
+    .form_input {
+      font-size: 0.85em; } }
 
 .header-top {
   background: #dbe342; }
@@ -402,7 +574,7 @@ section {
   .menu--opened .header-nav__menu {
     display: block; }
 
-.section, #section_1, #section_2, #section_3, #section_4, #section_5 {
+.section, #section_1, #section_2, #section_3, #section_4, #section_5, #section_6, #section_7, #section_8 {
   padding: 50px 0; }
 
 #section_1 {
@@ -475,6 +647,10 @@ section {
     color: #661a4f; }
   #section_2 .apresentacao_text {
     margin-top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.05em;
+    font-weight: 300;
+    line-height: 1.2;
     text-align: right;
     color: #333333; }
 
@@ -504,8 +680,12 @@ section {
         font-size: 1.5em; } }
   #section_3 p {
     margin-top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.05em;
+    font-weight: 300;
     text-align: center;
-    color: #333333; }
+    color: #333333;
+    line-height: 1.2; }
     #section_3 p span {
       font-weight: 600; }
   #section_3 .resultado_img {
@@ -574,8 +754,137 @@ section {
   background-position: center;
   background-repeat: repeat-y;
   background-size: cover; }
+  #section_5 h2 {
+    color: #661a4f;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1.2em; }
+    @media only screen and (max-width: 575.98px) {
+      #section_5 h2 {
+        font-size: 1.5em; } }
+  #section_5 h3 {
+    text-transform: uppercase;
+    margin-bottom: 1.2em; }
+    @media only screen and (max-width: 575.98px) {
+      #section_5 h3 {
+        font-size: 1.1em; } }
 
 @media only screen and (max-width: 575.98px) {
   .hidden-xs {
     visibility: hidden;
     display: none; } }
+
+#section_6 {
+  background: #661a4f;
+  background-image: url(../img/back01.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media only screen and (max-width: 575.98px) {
+    #section_6 {
+      background-position: left; } }
+  #section_6 p {
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.2em; }
+    @media only screen and (max-width: 575.98px) {
+      #section_6 p {
+        font-size: 1em;
+        padding: 10px 10px 10px 0;
+        background-color: #661a4f; } }
+
+#section_7 {
+  background: #661a4f; }
+
+#section_8 {
+  background: #d7d7d7;
+  color: #555; }
+  #section_8 h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1em;
+    line-height: 1.2; }
+  #section_8 p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 0.6em;
+    text-align: center; }
+
+footer {
+  background: #661a4f;
+  padding: 20px 0;
+  height: auto;
+  width: 100%;
+  display: table; }
+  footer a.footer_logo_hampy {
+    position: relative;
+    float: left; }
+    @media only screen and (max-width: 575.98px) {
+      footer a.footer_logo_hampy img {
+        width: 90px;
+        height: 25px; } }
+  footer .footer_menu {
+    position: relative;
+    float: right;
+    width: auto; }
+    @media only screen and (max-width: 575.98px) {
+      footer .footer_menu {
+        margin-top: 10px;
+        float: left; } }
+    footer .footer_menu a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      font-weight: 500;
+      color: #fff;
+      text-align: right;
+      line-height: 1.5;
+      text-transform: uppercase; }
+      @media only screen and (max-width: 575.98px) {
+        footer .footer_menu a {
+          font-size: 0.8em;
+          display: block;
+          text-align: left; } }
+
+#section_5 {
+  background: #fff;
+  background-image: url(../img/back04.png);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover; }
+  @media only screen and (max-width: 575.98px) {
+    #section_5 {
+      background-size: contain; } }
+  #section_5 .blog_post {
+    position: relative;
+    float: left;
+    display: block;
+    height: auto;
+    margin-bottom: 20px; }
+    #section_5 .blog_post .blog_post_img {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: auto; }
+      #section_5 .blog_post .blog_post_img img {
+        width: 100%;
+        height: auto; }
+    #section_5 .blog_post .blog_post_text {
+      background: #f2f2f2;
+      display: table;
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 20px; }
+      @media only screen and (max-width: 575.98px) {
+        #section_5 .blog_post .blog_post_text {
+          margin-top: -3px; } }
+    #section_5 .blog_post .blog_post_preview .blog_post_preview--title {
+      margin-top: 20px; }
+    #section_5 .blog_post .blog_post_preview .blog_post_preview--date {
+      margin-top: 8px; }
+    #section_5 .blog_post .blog_post_preview .blog_post_preview--text {
+      margin-top: 20px; }

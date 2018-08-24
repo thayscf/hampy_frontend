@@ -1,0 +1,61 @@
+#section_5 {
+    @extend .section;
+    background: #fff;
+    background-image: url(../img/back04.png);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    @include mq('Extra-small') {
+        background-size: contain;
+    }
+
+    .blog_post {
+        position: relative;
+        float: left;
+        display: block;
+        height: auto;
+        margin-bottom: 20px;
+
+        .blog_post_img {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: auto;
+            
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .blog_post_text {
+            background: $gray-ligthten;
+            display: table;
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            @include mq('Extra-small') {
+                margin-top: -3px;
+            }
+        }
+
+        .blog_post_preview {
+
+            .blog_post_preview--title {
+                @extend .text_title_blog_preview;
+                margin-top: 20px;
+            }
+
+            .blog_post_preview--date {
+                @extend .text_date_blog_preview;
+                margin-top: 8px;
+            }
+
+            .blog_post_preview--text {
+                @extend .text_blog_preview;
+                margin-top: 20px;
+            }
+        }
+    }  
+}

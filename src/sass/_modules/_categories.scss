@@ -1,0 +1,66 @@
+.blog_post--categories {
+    $h: 30px;
+    position: relative;
+    display: block;
+    height: $h;
+    width: auto;
+    background: $gray-200;
+    @include border-radius(1.5em);
+    @extend .text_categories;
+    text-transform: uppercase;
+    @include box-sizing(border-box);
+    line-height: 2.4;
+    padding: 0 20px 0 0;
+
+    &:hover {
+        text-decoration: none;
+        background: darken($color: $gray-200, $amount: 5%);
+    }
+
+    & .blog_post--categories_icon {
+        display: block;
+        height: $h;
+        width: $h;
+        @include border-radius(2em);
+        position: relative;
+        float: left;
+        padding: 5px;
+        margin-right: 8px;
+
+        & img {
+            display: block;
+            width: 18px;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+}
+
+.cat-01 {
+    color: $pink;
+
+    & div {
+        background-color: $pink;
+    }
+
+    .svg_icon {
+        width: px;
+        height: auto;
+    }
+
+    &:hover {
+        color: $pink;
+    }
+}
+
+.cat-02 {
+    color: $cian;
+
+    & div {
+        background-color: $cian;
+    }
+
+    &:hover {
+        color: $cian;
+    }
+}

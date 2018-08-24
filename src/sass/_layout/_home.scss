@@ -95,7 +95,8 @@
 
     & .apresentacao_text {
         margin-top: 30px;
-        @extend .p_home;
+        @include font-ubun(1.05em, 300);
+        line-height: 1.2;
         text-align: right;
         color: $gray;
     }
@@ -135,9 +136,10 @@
 
     & p {
         margin-top: 30px;
-        @extend .p_home;
+        @include font-ubun(1.05em, 300);
         text-align: center;
         color: $gray;
+        line-height: 1.2;
 
         & span {
             font-weight: 600;
@@ -223,11 +225,122 @@
     background-repeat: repeat-y;
     background-size: cover;
 
+    & h2 {
+        @extend .title_section;
+        color: $purple;
+        text-align: left;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        @include mq('Extra-small') {
+            font-size: 1.5em;
+        }
+    }
+
+    & h3 {
+        @extend .text_destaque;
+        text-transform: uppercase;
+        margin-bottom: 1.2em;
+        @include mq('Extra-small'){
+            font-size: 1.1em;
+        }
+    }
 }
 
 .hidden-xs {
     @include mq('Extra-small') {
         visibility: hidden;
         display: none;
+    }
+}
+
+#section_6 {
+    background: $purple;
+    background-image: url(../img/back01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @extend .section;
+    @include mq('Extra-small'){
+        background-position: left;
+    }
+
+    & p {
+        @extend .text_destaque;
+        color: #fff;
+        font-size: 1em;
+        line-height: 1.2em;
+        @include mq('Extra-small'){
+            font-size: 1em;
+            padding: 10px 10px 10px 0;
+            background-color: $purple;
+        }
+    }
+}
+
+#section_7 {
+    background: $purple;
+    @extend .section;
+}
+
+#section_8 {
+    background: $gray-300;
+    @extend .section;
+    color: #555;
+
+    h4 {
+        @include font-ubun(0.8em, 700);
+        text-align: center;
+        margin-bottom: 1em;
+        line-height: 1.2;
+    }
+
+    p {
+        @include font-ubun(0.8em, 400);
+        line-height: 1.2;
+        margin-bottom: 0.6em;
+        text-align: center;
+    }
+}
+
+footer {
+    background: $purple;
+    padding: 20px 0;
+    height: auto;
+    width: 100%;
+    display: table;
+
+    & a.footer_logo_hampy {
+        position: relative;
+        float: left;
+        
+        & img {
+            @include mq('Extra-small'){
+                width: 90px;
+                height: 25px;
+            }
+        }
+    }
+
+    & .footer_menu {
+        position: relative;
+        float: right;
+        width: auto;
+        @include mq('Extra-small'){
+            margin-top: 10px;
+            float: left;
+        }
+
+        & a {
+            @include font-mont(1em, 500);
+            color: #fff;
+            text-align: right;
+            line-height: 1.5;
+            text-transform: uppercase;
+            @include mq('Extra-small'){
+                font-size: 0.8em;
+                display: block;
+                text-align: left;
+            }
+        }
     }
 }

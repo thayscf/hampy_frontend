@@ -22,7 +22,29 @@
     font-style: italic;
 }
 
-.p_home {
-    @include font-ubun(1.05em, 300);
-    line-height: 20px;
+.text_categories {
+    @include font-mont(0.8em, 700);
+}
+
+.text_title_blog_preview {
+    @include font-mont(1.2em, 700);
+    font-style: normal;
+    color: $gray;
+}
+
+.text_date_blog_preview {
+    @include font-mont(0.8em, 300);
+    color: $gray;
+    text-transform: uppercase;
+}
+
+.text_blog_preview {
+    @include font-ubun(1em, 300);
+    color: $gray;
+}
+
+.text_btn_blog {
+    @include font-ubun(1em, 300);
+    color: #555;
+    text-transform: none;
 }

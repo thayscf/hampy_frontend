@@ -57,5 +57,35 @@
         }
     }
 
+    &.btn_blog {
+        background: $gray-300;
+        @extend .text_btn_blog;
+        margin-top: 15px;
+        float: right;
+        position: relative;
+
+        &:hover {
+            background: darken($color: $gray-300, $amount: 7%);
+        }
+    }
+
+    &.btn_input {
+        background: $purple;
+        @include font-mont(1em, 400);
+        text-transform: uppercase;
+        color: #fff;
+        position: absolute;
+        height: calc(2.5rem + 2px);
+        top: 0;
+        right: 0;
+        @include mq('Extra-small') {
+            font-size: 0.85em;
+        }
+
+        &:hover {
+            background: darken($color: $gray-300, $amount: 7%);
+        }
+    }
+
 }
 

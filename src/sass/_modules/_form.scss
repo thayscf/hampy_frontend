@@ -1,0 +1,31 @@
+input,  
+textarea { 
+    @include font-mont(1em, 400);
+    color: $gray;
+    @include input-placeholder {
+        color: $gray;
+        @include font-ubun(1.05em, 300);
+        line-height: 1.2;
+    }
+    @include mq('Extra-small') {
+        font-size: 0.85em;
+    }
+}
+
+.form_input {
+    display: block;
+    width: 100%;
+    height: calc(2.5rem + 2px);
+    padding: 0.7em 0.9em;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $gray;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 2em;
+    border: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    @include mq('Extra-small') {
+        font-size: 0.85em;
+    }
+  }
