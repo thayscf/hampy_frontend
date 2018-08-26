@@ -13,14 +13,16 @@
         position: relative;
         float: left;
         display: block;
-        height: auto;
         margin-bottom: 20px;
 
         .blog_post_img {
             display: block;
             position: relative;
-            width: 100%;
+            width: 50%;
             height: auto;
+            @include mq('Extra-small'){
+                width: 100%;
+            }
             
             & img {
                 width: 100%;
@@ -32,29 +34,46 @@
             background: $gray-ligthten;
             display: table;
             position: relative;
-            width: 100%;
-            height: auto;
+            width: 39%;
+            height: 100%;
             padding: 20px;
             @include mq('Extra-small') {
                 margin-top: -3px;
+                width: 100%;
+                height: auto;
             }
         }
 
         .blog_post_preview {
+            position: relative;
+            display: block;
+            float: left;
+            height: auto;
 
             .blog_post_preview--title {
                 @extend .text_title_blog_preview;
-                margin-top: 20px;
+                margin-top: 25px;
+                @include mq('Extra-small'){
+                    margin-top: 20px;
+                }
             }
 
             .blog_post_preview--date {
                 @extend .text_date_blog_preview;
-                margin-top: 8px;
+                margin-top: 12px;
+                @include mq('Extra-small'){
+                    margin-top: 8px;
+                }
             }
 
             .blog_post_preview--text {
                 @extend .text_blog_preview;
-                margin-top: 20px;
+                margin-top: 30px;
+                padding-bottom: 10px;
+                @include mq('Extra-small'){
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                }
             }
         }
     }  

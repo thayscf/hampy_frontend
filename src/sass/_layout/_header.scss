@@ -1,3 +1,7 @@
+header {
+    background: $green;
+}
+
 .header-top {
     background: $green;
     $h: 38px;
@@ -35,34 +39,42 @@
     &__nav {
         border-top: 1px solid $green-darken;
         height: $h;
+        right: 0;
         @include mq('Extra-small') {
             padding: 0;
         }
 
         & a {
-            width: 50%;
+            width: auto;
             height: 100%;
             display: block;
             position: relative;
             float: left;
             border-left: 1px solid $green-darken;
+            border-right: 1px solid $green-darken;
             @include font-mont(0.75em, 500);
             text-align: center;
-            padding: .9em;
+            padding: 0.9em 2em;
             color: $purple;
+            @include mq('Extra-small') {
+                float: left;
+                width: 50% !important;
+            }
 
             & img {
                 margin-right: 5px;
-                @include mq('Extra-small') {
-                    width: 11px;
-                    height: 12px;
-                    position: relative;
-                }
+                width: 11px;
+                height: 12px;
+                position: relative;
             }
 
             &:first-child {
-                border-left: none;
-                padding: 1em;
+                @include mq('Extra-small') {
+                    border-right: 0;
+                }
+                padding: 1em 2em;
+                border-right: 0;
+
             }
 
             &:hover {
@@ -77,8 +89,14 @@
     $height-menu: 63px;
 
     background: $purple;
-    height: auto;
+    height: $height-menu;
     width: 100%;
+    border-bottom: 1px solid darken($color: $purple, $amount: 4%);
+    @include mq('Extra-small'){
+        height: auto !important;
+        display: table;
+        border: none;
+    }
 
     .js & {
         height: $height-menu;
@@ -124,32 +142,54 @@
     }
 
     &__menu {
+        position: relative;
+        float: right;
+        @include mq('Extra-small') {
+            float: left;
+            width: 100%;
+        }
+
+        & li {
+            display: inline-block;
+            @include mq('Extra-small') {
+                display: block;
+                width: 100%;
+            }
+        }
        
         a {
             color: #fff;
             display: block;
-            font-size: 1.5em;
-            padding:  0.5em;
+            position: relative;
+            font-size: 1.1em;
+            padding: 1.2em  0.7em;
+            height: $height-menu;
             text-transform: uppercase;
             @extend .text_menu;
+            @include mq('small') {
+                font-size: .95em;
+                line-height: 1.5;
+            }
             @include mq('Extra-small') {
-                border-top: 1px solid darken($color: $purple, $amount: 3%);
+                border-top: 1px solid darken($color: $purple, $amount: 4%);
                 font-size: 1.2em;
                 padding: .8em;
 
                 &:last-child {
-                    border-bottom: 1px solid darken($color: $purple, $amount: 3%); 
+                    border-bottom: 1px solid darken($color: $purple, $amount: 4%); 
                 }   
             }
             
             &:hover {
-                background: darken($color: $purple, $amount: 3%);
+                background: darken($color: $purple, $amount: 4%);
                 text-decoration: none;
             }
         }
 
         .js & {
-           display: none; 
+            @include mq('Extra-small'){
+                display: none; 
+            }
         }
 
         .menu--opened & {

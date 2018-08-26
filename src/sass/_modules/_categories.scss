@@ -1,7 +1,9 @@
 .blog_post--categories {
     $h: 30px;
     position: relative;
+    float: left;
     display: block;
+    clear: both;
     height: $h;
     width: auto;
     background: $gray-200;
