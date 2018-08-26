@@ -88,5 +88,35 @@
         }
     }
 
+    &.btn_input_sm {
+        @include font-mont(1em, 400);
+        text-transform: uppercase;
+        position: absolute;
+        height: calc(2.5rem + 2px);
+        bottom: 2.5em;
+        padding: 0.5em 0.8em !important;
+        right: 0;
+        @include mq('small'){
+            top: 0;
+            font-size: 0.85em;
+            padding: 0.8em 1em !important;
+        }
+        @include mq('Extra-small'){
+            top: 0;
+            font-size: 0.85em;
+            padding: 0.8em 1em !important;
+        }
+    }
+}
+
+.primary {
+    color: #fff;
+    background: $purple-lighten !important;
+    border: 1px solid $purple-lighten !important;
+
+    &:hover {
+        background: $purple !important;
+        border: 1px solid $purple !important;
+    }
 }
 

@@ -371,7 +371,10 @@
     background-image: url(../img/back04.png);
     background-position: center;
     background-repeat: repeat-y;
-    background-size: contain;
+    background-size: cover;
+    @include mq('Extra-small') {
+        background-size: contain;
+    }
 
     & h2 {
         @extend .title_section;

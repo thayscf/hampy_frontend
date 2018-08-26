@@ -1,12 +1,175 @@
-#section_5 {
-    @extend .section;
+.blog_post {
+    position: relative;
+    float: left;
+    display: block;
+    margin-bottom: 20px;
+
+    .blog_post_img {
+        display: block;
+        position: relative;
+        width: 50%;
+        height: auto;
+        @include mq('Extra-small'){
+            width: 100%;
+        }
+        
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .blog_post_text {
+        background: $gray-ligthten;
+        display: table;
+        position: relative;
+        width: 39%;
+        height: 100%;
+        padding: 20px;
+        @include mq('Extra-small') {
+            margin-top: -3px;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .blog_post_preview {
+        position: relative;
+        display: block;
+        float: left;
+        height: auto;
+
+        .blog_post_preview--title {
+            @extend .text_title_blog_preview;
+            margin-top: 25px;
+            @include mq('Extra-small'){
+                margin-top: 20px;
+            }
+        }
+
+        .blog_post_preview--date {
+            @extend .text_date_blog_preview;
+            margin-top: 12px;
+            @include mq('Extra-small'){
+                margin-top: 8px;
+            }
+        }
+
+        .blog_post_preview--text {
+            @extend .text_blog_preview;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            @include mq('Extra-small'){
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & a.btn_blog {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        @include mq('Extra-small'){
+            position: relative;
+            float: right;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}  
+
+.blog_background {
     background: #fff;
     background-image: url(../img/back04.png);
     background-position: center;
     background-repeat: repeat-y;
-    background-size: cover;
+    background-size: 95% auto;
     @include mq('Extra-small') {
         background-size: contain;
+    }
+}
+
+.nav_blog_categories {
+    height: 65px;
+    margin-bottom: 15px;
+
+    & ul{
+        padding: 0;
+        margin: 0;
+        background: $purple-lighten;
+        height: 100%;
+
+        & li {
+            display: inline-block;
+
+            & a {
+                line-height: 3.2;
+                @include font-mont(1.1em, 300);
+            }
+        }
+    }
+}
+
+.blog_home {
+    padding-top: 70px;
+
+    &_title {
+        @extend .title_section;
+        color: $purple;
+        text-align: left;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        @include mq('Extra-small') {
+            font-size: 1.6em;
+        }
+    }
+
+    &_subtitle {
+        @extend .text_destaque;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+        @include mq('small'){
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+        @include mq('Extra-small'){
+            font-size: 1.1em;
+            margin-bottom: 1.2em;
+        }
+    }
+
+    & form {
+        position: relative;
+        height: 100%;
+        @include mq('small'){
+            position: relative;
+            height: auto;
+        }
+    }
+
+    &_search{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 2.5em;
+        @include mq('small'){
+            position: relative;
+            display: block;
+            margin-bottom: 1em;
+        }
+
+        &--input.form_input {
+            padding-right: 3.2em;
+            background: $gray-ligthten;
+        }
+    }
+
+    &--banner {
+        margin-bottom: 1em;
+        img {
+        width: 100%;
+        height: auto;
+        }
     }
 
     .blog_post {
@@ -34,7 +197,7 @@
             background: $gray-ligthten;
             display: table;
             position: relative;
-            width: 39%;
+            width: 50%;
             height: 100%;
             padding: 20px;
             @include mq('Extra-small') {
@@ -74,6 +237,18 @@
                     margin-top: 20px;
                     margin-bottom: 0;
                 }
+            }
+        }
+
+        & a.btn_blog {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            @include mq('Extra-small'){
+                position: relative;
+                float: right;
+                bottom: 0;
+                right: 0;
             }
         }
     }  
