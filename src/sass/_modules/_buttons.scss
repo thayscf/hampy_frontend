@@ -58,14 +58,13 @@
     }
 
     &.btn_blog {
-        background: $gray-300;
         @extend .text_btn_blog;
         margin-top: 15px;
         float: right;
         position: relative;
-
-        &:hover {
-            background: darken($color: $gray-300, $amount: 7%);
+        @include mq('small'){
+            position: relative;
+            float: right;
         }
     }
 
@@ -78,13 +77,17 @@
         height: calc(2.5rem + 2px);
         top: 0;
         right: 15px;
+        @include mq('small'){
+            top: 20px;
+            font-size: 0.85em;
+        }
         @include mq('Extra-small'){
             top: 20px;
             font-size: 0.85em;
         }
 
         &:hover {
-            background: darken($color: $gray-300, $amount: 7%);
+            background: darken($color: $purple, $amount: 7%);
         }
     }
 
@@ -117,6 +120,51 @@
     &:hover {
         background: $purple !important;
         border: 1px solid $purple !important;
+    }
+}
+
+.cat-01_btn {
+    color: #fff !important;
+    background: $pink;
+
+    &:hover {
+        background: darken($color: $pink, $amount: 10%);
+    }
+}
+
+.cat-02_btn {
+    color: #fff !important;
+    background: $cian;
+
+    &:hover {
+        background: darken($color: $cian, $amount: 10%);
+    }
+}
+
+.cat-03_btn {
+    color: #fff !important;
+    background: $yellow;
+
+    &:hover {
+        background: darken($color: $yellow, $amount: 10%);
+    }
+}
+
+.cat-04_btn {
+    color: #fff !important;
+    background: $orange;
+
+    &:hover {
+        background: darken($color: $orange, $amount: 10%);
+    }
+}
+
+.cat-05_btn {
+    color: #fff !important;
+    background: $purple-lighten;
+
+    &:hover {
+        background: darken($color: $purple-lighten, $amount: 10%);
     }
 }
 

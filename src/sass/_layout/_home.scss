@@ -28,6 +28,12 @@
             display: block;
             padding: 20px 0;
             @extend .text_destaque;
+            @include mq('Medium'){
+                font-size: 1em;
+                padding: 10px;
+                background-color: $purple;
+                text-align: right;
+            }
             @include mq('small'){
                 font-size: 1em;
                 padding: 10px;
@@ -50,6 +56,10 @@
             font-size: 3em;
             text-transform: uppercase;
             padding-left: 60px;
+            @include mq('Medium'){
+                font-size: 1.5em;
+                padding-left: 32px;
+            }
             @include mq('small'){
                 font-size: 1.5em;
                 padding-left: 32px;
@@ -62,6 +72,10 @@
             &:last-child {
                 margin-top: 19px;
                 padding-left: 48px;
+                @include mq('Medium'){
+                    margin-top: 8px;
+                    padding-left: 25px;
+                }
                 @include mq('small'){
                     margin-top: 8px;
                     padding-left: 25px;
@@ -109,6 +123,7 @@
     min-height: 500px;
     @include mq('Extra-small'){
         padding: 50px 0;
+        min-height: 400px;
     }
     
     &::after {
@@ -215,6 +230,9 @@
         color: $gray;
         line-height: 1.2;
         padding: 0 80px;
+        @include mq('small'){
+            padding: 0;
+        }
         @include mq('Extra-small'){
             padding: 0;
         }
@@ -232,6 +250,12 @@
     }
 
     .resultado {
+        @include mq('small'){
+            background: none;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 30px;
+        }
         @include mq('Extra-small'){
             background: none;
             padding-top: 0;
@@ -243,6 +267,10 @@
     .resultado_text {
         background: $gray-ligthten;
         margin-left: -15px;
+        @include mq('small'){
+            margin-left: 0;
+            background: #fff;
+        }
         @include mq('Extra-small'){
             margin-left: 0;
             background: #fff;
@@ -253,6 +281,10 @@
             padding: 0;
             margin: 10px;
             font-size: 1em;
+            @include mq('small'){
+                margin-top: 15px;
+                text-align: center;
+            }
             @include mq('Extra-small'){
                 margin-top: 15px;
                 text-align: center;
@@ -263,6 +295,11 @@
                 font-weight: 700;
                 padding-left: 15px;
                 font-size: .8em;
+                @include mq('small'){
+                    margin-top: 5px;
+                    text-align: center;
+                    font-size: 1em;
+                }
                 @include mq('Extra-small'){
                     margin-top: 8px;
                     text-align: center;
@@ -301,6 +338,10 @@
         bottom: 0;
         left: 0;
         right: 0;
+        @include mq('small'){
+            display: none;
+            visibility: hidden;
+        }
         @include mq('Extra-small'){
             display: none;
             visibility: hidden;
@@ -401,6 +442,12 @@
         position: absolute;
         bottom: 20px;
         right: 20px;
+        @include mq('small'){
+            position: relative;
+            float: right;
+            bottom: 0;
+            right: 0;
+        }
         @include mq('Extra-small'){
             position: relative;
             float: right;
@@ -418,6 +465,8 @@
 }
 
 #section_6 {
+    position: relative;
+    float: left;
     background: $purple;
     background-image: url(../img/back01.png);
     background-position: 0% 25%;
@@ -441,6 +490,9 @@
     }
 
     & form {
+        @include mq('small'){
+            margin-top: 20px;
+        }
         @include mq('Extra-small'){
             margin-top: 20px;
         }
@@ -459,13 +511,17 @@
 }
 
 #section_7 {
+    position: relative;
+    float: left;
     background: $purple;
     @extend .section;
 }
 
 #section_8 {
+    position: relative;
+    float: left;
     background: $gray-300;
-    @extend .section;
+    padding: 50px 0;
     color: #555;
 
     h4 {
